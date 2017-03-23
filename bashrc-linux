@@ -1,0 +1,48 @@
+alias useful="cat ~/.bashrc"
+alias u="useful"
+ 
+alias code="cd ~/Documents/Code"
+alias c="clear && ls"
+alias open="explorer ."
+alias quit="exit"
+ 
+# Git Commands
+alias gs='git status'
+ 
+alias ga='git add'
+alias gaa='git add *'
+ 
+alias gc='git commit -m'
+alias gl='git log'
+ 
+alias gco='git checkout'
+alias gcom='git checkout master'
+alias gcod='git checkout dev'
+alias gb='git checkout -b'
+ 
+alias gp='git pull'
+ 
+alias gm='git merge'
+alias gmm='git merge master'
+alias gmd='git merge dev'
+ 
+alias gst='git stash'
+alias gstl='git stash list'
+alias gstp='git stash pop'
+alias gstd='git stash drop'
+ 
+export GREP_COLOR=31
+ 
+function mark {
+    export marked_location="`pwd`";
+}
+ 
+function recall {
+    cd "$marked_location"
+}
+ 
+function search {
+    grep -rnw . -e $1 --color
+}
+ 
+useful
